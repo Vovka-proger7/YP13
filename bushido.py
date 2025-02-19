@@ -1,3 +1,3 @@
-print('Пикабу, BUSHIDO HALLOWEEN Я постоянно с Трэвисом, как Дин ')
-print('Пикабу, BUSHIDO HALLOWEEN Я постоянно с Трэвисом, как Дин ')
-print('Пикабу, BUSHIDO HALLOWEEN Я постоянно с Трэвисом, как Дин ')
+import sqlite3
+connection = sqlite3.connect('my_database.db')
+connection.close()
