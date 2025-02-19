@@ -15,7 +15,10 @@ age INTEGER
 ''')
 
 # Создание индекса для столбца "email"
-cursor.execute('CREATE INDEX idx_email ON Users(email)')
+cursor.execute('CREATE INDEX IF NOT EXISTS idx_email ON Users(email)')
+
+cursor.execute('''INSERT INTO Users (username, email,
+age) VALUES ('newuser', 'newuser@example.com', 28)''')
 
 # Сохраняем изменения и закрываем соединение
 connection.commit()
