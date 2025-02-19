@@ -26,7 +26,10 @@ cursor.execute('''UPDATE Users SET age = 29 WHERE
 username = 'newuser'
 ''')
 
-
+# Удаляем пользователя "newuser"
+cursor.execute('''DELETE FROM Users WHERE
+username = 'newuser'
+''')
 
 # Сохраняем изменения и закрываем соединение
 connection.commit()
