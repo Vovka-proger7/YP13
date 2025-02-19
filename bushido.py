@@ -31,6 +31,14 @@ cursor.execute('''DELETE FROM Users WHERE
 username = 'newuser'
 ''')
 
+# Выбираем всех пользователей
+cursor.execute('SELECT * FROM Users')
+users = cursor.fetchall()
+
+# Выводим результаты
+for user in users:
+    print(user)
+
 # Сохраняем изменения и закрываем соединение
 connection.commit()
 connection.close()
