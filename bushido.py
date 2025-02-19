@@ -20,6 +20,14 @@ cursor.execute('CREATE INDEX IF NOT EXISTS idx_email ON Users(email)')
 cursor.execute('''INSERT INTO Users (username, email,
 age) VALUES ('newuser', 'newuser@example.com', 28)''')
 
+
+# Обновляем возраст пользователя "newuser"
+cursor.execute('''UPDATE Users SET age = 29 WHERE
+username = 'newuser'
+''')
+
+
+
 # Сохраняем изменения и закрываем соединение
 connection.commit()
 connection.close()
