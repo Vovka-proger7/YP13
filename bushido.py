@@ -60,6 +60,13 @@ for row in filtered_results:
     print(row)
 
 
+# Выбираем и сортируем пользователей по возрасту по убыванию
+cursor.execute('SELECT username, age FROM Users ORDER BY age DESC')
+results = cursor.fetchall()
+for row in results:
+    print(row)
+
+
 
 # Сохраняем изменения и закрываем соединение
 connection.commit()
