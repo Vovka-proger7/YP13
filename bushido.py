@@ -46,6 +46,13 @@ results = cursor.fetchall()
 for row in results:
     print(row)
 
+# Получаем средний возраст пользователей для каждого возраста
+cursor.execute('SELECT age, AVG(age) FROM Users GROUP BY age')
+results = cursor.fetchall()
+for row in results:
+    print(row)
+
+
 
 # Сохраняем изменения и закрываем соединение
 connection.commit()
