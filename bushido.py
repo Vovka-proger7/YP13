@@ -1,5 +1,5 @@
 import sqlite3
-
+# sdvsdvdsvds
 # Устанавливаем соединение с базой данных
 connection = sqlite3.connect('my_database.db')
 cursor = connection.cursor()
